@@ -6,7 +6,7 @@ deps:
 
 
 lint:
-	flake8 hello_world test
+		flake8 hello_world test
 
 
 test:
