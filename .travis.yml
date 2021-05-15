@@ -10,3 +10,8 @@ script:
   - make lint
   - make docker_build
   - make docker_push
+
+deploy:
+  provider: heroku
+  app: https://intense-spire-79037.herokuapp.com
+  api_key: ${HEROKU_API_KEY}
