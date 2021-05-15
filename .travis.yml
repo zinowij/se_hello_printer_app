@@ -13,5 +13,5 @@ script:
 
 deploy:
   provider: heroku
-  app: https://intense-spire-79037.herokuapp.com
+  app: intense-spire-79037
   api_key: ${HEROKU_API_KEY}
