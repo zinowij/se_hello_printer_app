@@ -28,7 +28,7 @@ docker_run: docker_build
 USERNAME=bad5a5026175
 TAG=$(USERNAME)/hello-world-printer
 
-
+# wpisac komende w terminalu: export DOCKER_PASSWORD=TWOJE_HASLO
 docker_push: docker_build
 				@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
 				docker tag hello-world-printer $(TAG); \
