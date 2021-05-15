@@ -16,11 +16,6 @@ run:
 	PYTHONPATH=. FLASK_APP=hello_world flask run
 
 
-docker:
-USERNAME=bad5a5026175
-TAG=$(USERNAME)/hello-world-printer
-
-
 docker_build:
 				docker build -t hello-world-printer .
 
@@ -29,6 +24,9 @@ docker_run: docker_build
 				--name hello-world-printer-dev \
 				-p 5000:5000 \
 				-d hello-world-printer
+
+USERNAME=bad5a5026175
+TAG=$(USERNAME)/hello-world-printer
 
 
 docker_push: docker_build

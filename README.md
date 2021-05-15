@@ -89,4 +89,10 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ yum makecache fast
   $ yum install -y docker-ce
   $ systemctl start docker
+
+
+      $ make docker_build
+      $ make docker_run
+      $ export DOCKER_PASSWORD=Te5ter123
+      $ make docker_push
   ```
