@@ -37,15 +37,11 @@ docker_push: docker_build
 
 
 test_smoke:
-				curl --fail 127.0.0.1:5000
-
-							 #alternatywne rozwiązanie - wyświetlenie tylko kodu http:
-       #test_smoke:
-#             curl -s -o /dev/null -w "%{http_code}" --fail 127.0.0.1:5000
+				curl --fail 127.0.0.1:5000             #alternatywne rozwiązanie-wyświetlenie tylko kodu http: #test_smoke:# curl -s -o /dev/null -w "%{http_code}" --fail 127.0.0.1:5000
 
 test_cov:
 				PYTHONPATH=. py.test --verbose -s --cov=.
 
 test_xunit:
-				PYTHONPATH=. py.test -s --cov=. --cov-report xml --junit-xml=test_results.xml
-				
+				PYTHONPATH=. py.test -s --cov=. --cov-report xml --junit-xml=
+				test_results.xml
