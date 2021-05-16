@@ -121,3 +121,23 @@ Travis:
 
 statuscake:
 ![StatusCake](https://app.statuscake.com/button/index.php?Track=5961424&Days=1&Design=1)(google.com)
+
+
+
+Test Coverage
+
+1. Dodaj pytest-cov, plugin do pytest, do analizy pokrycia testami kodu, do test_requirements.txt:
+      $ echo 'pytest-cov' >> test_requirements.txt
+      $ pip install -r test_requirements.txt
+2. Teraz możemy wywołać py.test z aktywowanym pytest-cov (i wygenerować coverage.xml):
+      $ PYTHONPATH=. py.test --verbose -s --cov=.
+  Zamiast na ekran możemy przekierować raport do raportu XML:
+      $ PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml
+3. Dodajmy również tworzenie pliku junit:
+$ PYTHONPATH=. py.test -s --cov=. --cov-report xml --junit-xml=test_results.xml
+4. Dodaj dwa nowe targety do pliku Makefile:
+- test_cov – wywłanie coverage z wypisaniem raportu na ekran 
+- test_xunit – generacja xunit i coverage
+5. Dodaj do .gitignore, aby git (git status) ignorował pliki: test_results.xml, coverage.xml i .coverage. 6. Wykorzystaj make test_xunit w .travis.yml. Sprawdź, czy działa. Możliwe, że musisz przypiąć wersję
+pytest w test_requirements.txt, np.:
+pytest>=4.6
