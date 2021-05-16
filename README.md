@@ -120,7 +120,7 @@ Travis:
 
 
 statuscake:
-![StatusCake](https://app.statuscake.com/button/index.php?Track=5961424&Days=1&Design=1)(google.com)
+![StatusCake](https://app.statuscake.com/button/index.php?Track=5961424&Days=1&Design=1)
 
 
 
@@ -136,7 +136,7 @@ Test Coverage
 3. Dodajmy również tworzenie pliku junit:
 $ PYTHONPATH=. py.test -s --cov=. --cov-report xml --junit-xml=test_results.xml
 4. Dodaj dwa nowe targety do pliku Makefile:
-- test_cov – wywłanie coverage z wypisaniem raportu na ekran 
+- test_cov – wywłanie coverage z wypisaniem raportu na ekran
 - test_xunit – generacja xunit i coverage
 5. Dodaj do .gitignore, aby git (git status) ignorował pliki: test_results.xml, coverage.xml i .coverage. 6. Wykorzystaj make test_xunit w .travis.yml. Sprawdź, czy działa. Możliwe, że musisz przypiąć wersję
 pytest w test_requirements.txt, np.:
