@@ -15,6 +15,9 @@ pipeline {
             steps {
                     sh 'make test'
                 }
+            steps {
+                    sh 'push do git repo'
+            }
         }
     }
 }
