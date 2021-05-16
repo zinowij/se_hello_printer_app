@@ -96,3 +96,28 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
       $ export DOCKER_PASSWORD=Te5ter123
       $ make docker_push
   ```
+
+
+  https://app.statuscake.com/YourStatus2.php
+
+
+  W tym ćwiczeniu przygotowujemy do produkcji naszą aplikację, w tym celu musimy przygotować monitoring. Budżet jest niski, terminy gonią, decydujemy się na prosty monitoring, który wykryje, kiedy jesteśmy offline - statuscake.com.
+1. Przejdź do statuscake.com
+2. Utwórz konto.
+3. Dodaj grupę kontaktową ze swoim email-em.
+4. Dodaj Uptime Monitoring test:
+- URL: url Twojej aplikacji
+- Nazwa: dowolna
+- Contact Group: zdefiniowana w 3
+
+
+https://app.statuscake.com/button/index.php?Track=TRACK_ID&Days=1&Design=1
+
+
+Buttons:
+Travis:
+[![Build Status](https://travis-ci.org/zinowij/se_hello_printer_app.svg?branch=master&status=passed)](https://travis-ci.org/github/zinowij/se_hello_printer_app/builds/771226804)
+
+
+statuscake:
+![StatusCake](https://app.statuscake.com/button/index.php?Track=5961424&Days=1&Design=1)(google.com)
